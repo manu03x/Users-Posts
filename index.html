@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.24/dist/css/uikit.min.css" />
+    </head>
+    <body>
+        <div class="uk-section uk-section-default">
+            <div class="uk-container">
+          
+              <h3>Usuario:</h3>
+          
+              <select class="uk-select" id="listUsers">
+                <option value=""></option>
+              </select>
+          
+            </div>
+          </div>
+        <!-- Form usuarios  -->
+        <div class="container">
+            <form class="uk-grid-small uk-margin-bottom" uk-grid id="form">
+
+                <div class="uk-width-1-2@s">
+                    <label class="uk-form-label">Name</label>
+                    <input class="uk-input" id="name" type="text" placeholder="Name">
+                </div>
+                <div class="uk-width-1-4@s">
+                    <label class="uk-form-label">Username</label>
+                    <input class="uk-input" id="username" type="text" placeholder="Username">
+                </div>
+                <div class="uk-width-1-4@s">
+                    <label class="uk-form-label">Email</label>
+                        <input class="uk-input" id="email" type="text" placeholder="Email">
+                </div>
+                <div class="uk-width-1-2@s">
+                    <label class="uk-form-label">Webpage</label>
+                    <input class="uk-input" id="webpage" type="text" placeholder="Webpage">
+                </div>
+                <div class="uk-width-1-2@s">
+                    <label class="uk-form-label">Age</label>
+                        <input class="uk-input" id="age" type="number" placeholder="Age">
+                </div>
+
+                <div class="uk-flex">
+                    <button id="submit-form"class="uk-button uk-button-primary" type="submit">Guardar</button>
+                    <button id="cancel-form"class="uk-button uk-button-danger uk-margin-left">Cancelar</button>
+                </div>
+
+            </form>
+        </div>
+
+        <!-- Listado de usuarios -->
+        <div uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 500" class="container">
+            <div uk-scrollspy-class="uk-animation-slide-bottom">
+                <table class="uk-table uk-table-divider">
+                    <thead>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Username</th>
+                            <th>Website</th>
+                            <th>Email</th>
+                            <th>Age</th>
+                    </thead>
+                    <tbody id="users">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+            <h2 class="container uk-flex uk-flex-center uk-margin-bottom">Posts</h2>
+          <div id="user-posts" class=" container uk-child-width-1-2@s uk-grid-match" uk-grid uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 500; repeat: true">
+            
+          </div>
+
+        <!-- UIkit JS -->
+        <script src="app.js" type="module"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.24/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.24/dist/js/uikit-icons.min.js"></script>
+    </body>
+</html>

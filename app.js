@@ -67,7 +67,7 @@ class UI {
                 <td>${user.username}</td>
                 <td>${user.website}</td>
                 <td>${user.email}</td>
-                <td>${user.age}</td>
+                <td>${user.age || 'Not set'}</td>
             `
             userRow.appendChild(cell)
         })
@@ -100,7 +100,7 @@ class UI {
             nameInput.value = user.name
             usernameInput.value = user.username
             emailInput.value = user.email
-            webpageInput.value = user.website | ''
+            webpageInput.value = user.website
             ageInput.value = user.age
         }
 
